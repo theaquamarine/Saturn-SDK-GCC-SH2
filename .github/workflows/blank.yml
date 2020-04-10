@@ -24,10 +24,23 @@ jobs:
 
     # Runs a single command using the runners shell
     - name: Run a one-line script
-      run: echo Hello, world!
+      run: | 
+        echo SRCDIR $SRCDIR BUILDDIR $BUILDDIR TARGETMACH $TARGETMACH BUILDMACH $BUILDMACH HOSTMACH $HOSTMACH INSTALLDIR $INSTALLDIR SYSROOTDIR $SYSROOTDIR ROOTDIR $ROOTDIR DOWNLOADDIR $DOWNLOADDIR PROGRAM_PREFIX $PROGRAM_PREFIX
+        ./build-elf.sh
+      env: 
+        SRCDIR: ${{ github.workspace }}/source
+        BUILDDIR:  ${{ github.workspace }}/build
+        TARGETMACH: sh-elf
+        BUILDMACH: x86_64-pc-linux-gnu
+        HOSTMACH: x86_64-pc-linux-gnu
+        INSTALLDIR:  ${{ github.workspace }}/toolchain
+        SYSROOTDIR: ${{ github.workspace }}/toolchain/sysroot
+        ROOTDIR:  ${{ github.workspace }}
+        DOWNLOADDIR:  ${{ github.workspace }}/download
+        PROGRAM_PREFIX: saturn-sh2-
 
     # Runs a set of commands using the runners shell
-    - name: Run a multi-line script
-      run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
+    #- name: Run a multi-line script
+    #  run: |
+     #   echo Add other actions to build,
+      #  echo test, and deploy your project.

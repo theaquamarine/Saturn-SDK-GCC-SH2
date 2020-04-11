@@ -2,7 +2,7 @@
 
 This is an optimised version of the GCC C compiler for Hitachi SuperH SH-2 microprocessors.
 
-[![GitHub Actions | miracoli/Saturn-SDK-GCC-SH2](https://github.com/miracoli/Saturn-SDK-GCC-SHmiracoli/Saturn-SDK-GCC-SH2/workflows/building/badge.svg)](https://github.com/miracoli/Saturn-SDK-GCC-SH2/actions?workflow=building)
+[![GitHub Actions | miracoli/Saturn-SDK-GCC-SH2](https://github.com/miracoli/Saturn-SDK-GCC-SH2/workflows/building/badge.svg)](https://github.com/miracoli/Saturn-SDK-GCC-SH2/actions?workflow=building)
 
 ## BUILDING
 Currently, only GNU/Linux and Windows are actively supported as build targets.
@@ -15,16 +15,27 @@ Mac OS X is supported by way of Misty De Meo.
 
 In order to successfully build GCC, the following environment variables need
 to be defined:
+
 export SRCDIR=$(pwd)/source
+
 export BUILDDIR=$(pwd)/build
+
 export TARGETMACH=sh-elf
+
 export BUILDMACH=x86_64-pc-linux-gnu
+
 export HOSTMACH=x86_64-pc-linux-gnu
+
 export INSTALLDIR=$(pwd)/toolchain
+
 export SYSROOTDIR=$INSTALLDIR/sysroot
+
 export ROOTDIR=$(pwd)
+
 export DOWNLOADDIR=$(pwd)/download
+
 export PROGRAM_PREFIX=saturn-sh2-
+
 
 PROGRAM_PREFIX is the prefix used before the tool's name, such as:
 saturn-sh2-gcc, where gcc is the program, with saturn-sh2- being the prefix.

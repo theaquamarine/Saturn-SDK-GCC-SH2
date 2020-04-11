@@ -1,12 +1,10 @@
-| SEGA SATURN HITACHI SUPERH SH-2 GCC C COMPILER |
+# SEGA SATURN HITACHI SUPERH SH-2 GCC C COMPILER
 
-|OVERVIEW|
-This is an optimised version of the GCC C compiler for Hitachi SuperH SH-2
-microprocessors.
+This is an optimised version of the GCC C compiler for Hitachi SuperH SH-2 microprocessors.
 
 [![GitHub Actions | miracoli/Saturn-SDK-GCC-SH2](https://github.com/miracoli/Saturn-SDK-GCC-SHmiracoli/Saturn-SDK-GCC-SH2/workflows/building/badge.svg)](https://github.com/miracoli/Saturn-SDK-GCC-SH2/actions?workflow=building)
 
-|BUILDING|
+## BUILDING
 Currently, only GNU/Linux and Windows are actively supported as build targets.
 Other operating systems may work with modification to the build files.  If you
 have made changes to build on a non-supported operating system, please use

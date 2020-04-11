@@ -44,7 +44,7 @@ if [[ "$ARIA2" == "FALSE" ]]; then
 else
 	echo "https://ftp.gnu.org/gnu/gnu-keyring.gpg" > downloadlist.txt
 	echo "https://ftp.gnu.org/gnu/binutils/binutils-${BINUTILSVER}${BINUTILSREV}.tar.bz2.sig" >> downloadlist.txt
-	echo "https://ftp.gnu.org/gnu/gcc/gcc-${GCCVER}${GCCREV}/gcc-${GCCVER}${GCCREV}.tar.bz2.sig" >> downloadlist.txt
+	echo "https://ftp.gnu.org/gnu/gcc/gcc-${GCCVER}${GCCREV}/gcc-${GCCVER}${GCCREV}.tar.gz.sig" >> downloadlist.txt
 	echo "https://ftp.gnu.org/gnu/binutils/binutils-${BINUTILSVER}${BINUTILSREV}.tar.bz2" >> downloadlist.txt
 	echo "https://ftp.gnu.org/gnu/gcc/gcc-${GCCVER}${GCCREV}/gcc-${GCCVER}${GCCREV}.tar.gz" >> downloadlist.txt
 	echo "ftp://sourceware.org/pub/newlib/newlib-${NEWLIBVER}${NEWLIBREV}.tar.gz" >> downloadlist.txt

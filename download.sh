@@ -14,13 +14,13 @@ else
 	exit 1
 fi
 
-if test "`parallel -V`"; then
-	PARALLEL="TRUE"
+if test "`aria2c -v`"; then
+	ARIA2="TRUE"
 else
-	PARALLEL="FALSE"
+	ARIA2="FALSE"
 fi
 
-if [[ "$PARALLEL" == "FALSE" ]]; then
+if [[ "$ARIA2" == "FALSE" ]]; then
 	$FETCH https://ftp.gnu.org/gnu/gnu-keyring.gpg
 
 	$FETCH https://ftp.gnu.org/gnu/binutils/binutils-${BINUTILSVER}${BINUTILSREV}.tar.bz2.sig
@@ -64,7 +64,7 @@ else
 		echo "https://gmplib.org/download/gmp/gmp-${GMPVER}${GMPREV}.tar.bz2" >> downloadlist.txt
 	fi
 
-	cat downloadlist.txt | parallel -j 10 --progress --gnu $FETCH
+	aria2c -i downloadlist.txt
 fi
 
 # GPG return status

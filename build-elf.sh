@@ -1,7 +1,7 @@
 #!/bin/bash
 export BINUTILSVER=2.31
 export BINUTILSREV=
-export GCCVER=8.2.0
+export GCCVER=9.3.0
 export GCCREV=
 export NEWLIBVER=3.0.0
 export NEWLIBREV=

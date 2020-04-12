@@ -35,7 +35,7 @@ jobs:
         echo SRCDIR $SRCDIR BUILDDIR $BUILDDIR TARGETMACH $TARGETMACH BUILDMACH $BUILDMACH HOSTMACH $HOSTMACH INSTALLDIR $INSTALLDIR SYSROOTDIR $SYSROOTDIR ROOTDIR $ROOTDIR DOWNLOADDIR $DOWNLOADDIR PROGRAM_PREFIX $PROGRAM_PREFIX
         # ./build-elf.sh
         sudo apt-get update
-        sudo apt-get -y install automake
+        sudo apt-get -y install automake/bionic-backports
         aclocal --version
       env: 
         SRCDIR: ${{ github.workspace }}/source

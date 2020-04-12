@@ -33,7 +33,8 @@ jobs:
               brew install coreutils
         fi
         echo SRCDIR $SRCDIR BUILDDIR $BUILDDIR TARGETMACH $TARGETMACH BUILDMACH $BUILDMACH HOSTMACH $HOSTMACH INSTALLDIR $INSTALLDIR SYSROOTDIR $SYSROOTDIR ROOTDIR $ROOTDIR DOWNLOADDIR $DOWNLOADDIR PROGRAM_PREFIX $PROGRAM_PREFIX
-        ./build-elf.sh
+        # ./build-elf.sh
+        aclocal -v
       env: 
         SRCDIR: ${{ github.workspace }}/source
         BUILDDIR:  ${{ github.workspace }}/build

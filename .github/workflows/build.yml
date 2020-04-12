@@ -19,7 +19,7 @@ jobs:
 
     strategy:
       matrix:
-        os: [macos-latest, ubuntu-latest, ubuntu-latest]
+        os: [macos-latest, ubuntu-latest]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -28,7 +28,10 @@ jobs:
 
     # Runs a single command using the runners shell
     - name: Build toolchain
-      run: | 
+      run: |
+        if [ "$RUNNER_OS" == "macOS" ]; then
+              brew install coreutils
+        fi
         echo SRCDIR $SRCDIR BUILDDIR $BUILDDIR TARGETMACH $TARGETMACH BUILDMACH $BUILDMACH HOSTMACH $HOSTMACH INSTALLDIR $INSTALLDIR SYSROOTDIR $SYSROOTDIR ROOTDIR $ROOTDIR DOWNLOADDIR $DOWNLOADDIR PROGRAM_PREFIX $PROGRAM_PREFIX
         ./build-elf.sh
       env: 

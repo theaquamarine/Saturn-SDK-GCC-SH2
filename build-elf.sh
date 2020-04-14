@@ -9,7 +9,7 @@ export MPCVER=1.1.0
 export MPCREV=
 export MPFRVER=4.0.2
 export MPFRREV=
-export GMPVER=6.1.2
+export GMPVER=6.2.0
 export GMPREV=
 
 export OBJFORMAT=ELF
